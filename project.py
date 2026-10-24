@@ -1,4 +1,4 @@
-import random 
+import random
 
 # Task 1
 def exact_probability(n, days=365):
@@ -6,12 +6,13 @@ def exact_probability(n, days=365):
         return 0
     if n > days:
         return 1
-        
+
     product = 1
     for i in range(n):
         product = product * (days - i) / days
-        
+
     return 1 - product
+
 
 # Task 2
 def has_repeat(values):  
@@ -42,6 +43,7 @@ def simulate(n, trials, days=365):
             count = count + 1 
     return count / trials 
 
+
 # Task 4
 print("----------------------------------------")
 print(f"n\texact_probability\tsimulate")
@@ -53,7 +55,6 @@ print("----------------------------------------")
 
 # Task 5
 n = 1
-
 while True:
     threshold = exact_probability(n)
     if threshold >= 0.5:
@@ -61,7 +62,8 @@ while True:
         break
     n += 1
 
-# Task 5 For 100 days
+
+# Task 5 for 100 days
 m = 1
 while True:
     threshold = exact_probability(m, days=100)
