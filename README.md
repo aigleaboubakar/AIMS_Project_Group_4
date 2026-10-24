@@ -5,6 +5,7 @@ We calculate the probability that all birthdays are distinct.
 The desired probability is 1 minus the probability that all birthdays are distinct.
 
 #Task 2
+This function checks whether a list contains at least one duplicate value. It starts with an empty list called seen, then loops through each value in the input: if the value is not already in seen, it is added, and if it is already there, the function immediately returns True because a repeat has been found. If the loop finishes without finding any repeated value, the function returns False.
 
 #Task 3
 function simulates the birthday experiment several times.
