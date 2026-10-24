@@ -1,4 +1,5 @@
 import random 
+
 #Task 1
 def exact_probability(n, days=365):
     if n > days:
@@ -9,10 +10,6 @@ def exact_probability(n, days=365):
         product = product*(days-i)/days
         
     return 1 - product
-print(round(exact_probability(23),4))
-print(exact_probability(1))
-print(exact_probability(366))
-
 
 #task2
 def has_repeat(values):
@@ -29,10 +26,6 @@ def has_repeat(values):
 values = [3, 5, 7, 8]
 print(has_repeat(values))
 
-
-
-
-
 #task3
 def simulate(n, trials, days=365):
     count=0 
@@ -42,13 +35,30 @@ def simulate(n, trials, days=365):
             count=count+1 
     return count/trials 
 
+#task4
+print("----------------------------------------")
+print(f"n\texact_probability\tsimulate")
+print("----------------------------------------")
+for n in [i * 10 for i in range(1, 6)]:
+    print(f"{n}\t{exact_probability(n)}\t {simulate(n, 5000)}")
+print("----------------------------------------")
 
 
-#Task 5 For 100 days
+#Task 5
 n = 1
+
 while True:
-    minima  = exact_probability(n, days=100)
+    minima  = exact_probability(n)
     if minima >= 0.5:
-        print(f'The smallest n for exact_prob >= 0.5 and day = 100 is : {n}')
+        print(f'The smallest n for exact_prob >= 0.5 is : {n}')
         break
     n += 1
+
+#Task 5 For 100 days
+m = 1
+while True:
+    minima  = exact_probability(m, days=100)
+    if minima >= 0.5:
+        print(f'The smallest n for exact_prob >= 0.5 and day = 100 is : {m}')
+        break
+    m += 1
