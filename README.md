@@ -63,11 +63,10 @@ For a 100-day year, the smallest number is:
 
 ## Authors
 Group 4 / Students Names
-
-Aboubakar Mahamat Ali
-Amy Diop
-Marie Hortense Saizonou
-Abdourahmane Fadhoul
-Moumouni Sawadogo
+1. Amy Diop
+2. Aboubakar Mahamat Ali
+3. Marie Hortense Saizonou
+4. Abdourahmane Fadhoul
+5. Moumouni Sawadogo
 
 
