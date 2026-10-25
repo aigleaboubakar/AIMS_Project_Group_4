@@ -55,8 +55,48 @@ For a 100-day year, the smallest number is:
 
 - `n = 13`
 
+# Think and explain
 
-## Technologies used
+`exact_probability(366)` is 1 because when there are 366 people, it is impossible for all birthdays to be different. There are only 365 possible birthdays, so at least two people must share one.
+
+The probability that all birthdays are different becomes 0, so:
+
+P(two people share a birthday) = 1 - P(all different) = 1 - 0 = 1
+
+# Extra (optional)
+
+We need approximately 88 people so that the probability that three people share a birthday is around 0.5.
+
+Let's confirm this with the following simulation using `trials = 10_100`.
+
+```python
+import random
+
+def has_triple(values):
+    count = {}
+    for i in values:
+        count[i] = count.get(i, 0) + 1
+        if count[i] > 2:
+            return True
+    return False
+
+def simulation(trials, days=365):
+    n = 1
+    count = 0
+    while count / trials < 0.5:
+        count = 0
+        for i in range(trials):
+            birth_days = [random.randint(1, days) for i in range(n)]
+            if has_triple(birth_days):
+                count += 1
+        if count / trials < 0.5:
+            n += 1
+
+    return n, count / trials
+
+simulation(10100)
+```
+# Technologies used
 
 - Python
 - `random` module

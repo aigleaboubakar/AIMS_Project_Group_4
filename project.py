@@ -5,13 +5,13 @@ def exact_probability(n, days=365):
     if n <= 0:
         return 0
     if n > days:
-        return 1
+        return 1.0
 
     product = 1
     for i in range(n):
         product = product * (days - i) / days
 
-    return 1 - product
+    return round((1 - product), 4)
 
 
 # Task 2
@@ -49,7 +49,7 @@ print("----------------------------------------")
 print(f"n\texact_probability\tsimulate")
 print("----------------------------------------")
 for n in [10, 20, 23, 30, 40, 50]:
-    print(f"{n}\t{exact_probability(n)}\t {simulate(n, 5000)}")
+    print(f"{n}\t  {exact_probability(n)}\t\t {simulate(n, 5000)}")
 print("----------------------------------------")
 
 
@@ -58,7 +58,7 @@ n = 1
 while True:
     threshold = exact_probability(n)
     if threshold >= 0.5:
-        print(f'The smallest n for exact_prob >= 0.5 is : {n}')
+        print(f'The smallest n for exact_prob >= 0.5 and day = 365 is : {n}')
         break
     n += 1
 
@@ -71,3 +71,11 @@ while True:
         print(f'The smallest n for exact_prob >= 0.5 and day = 100 is : {m}')
         break
     m += 1
+
+
+print(exact_probability(23))  
+print(exact_probability(1))  
+print(exact_probability(366))  
+print(has_repeat([3, 5, 7, 3]))  
+print(has_repeat([1, 2, 3]))  
+print(simulate(23, 100000))
