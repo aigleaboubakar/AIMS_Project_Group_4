@@ -106,7 +106,7 @@ Group 4 / Students Names
 1. Amy Diop
 2. Aboubakar Mahamat Ali
 3. Marie Hortense Saizonou
-4. Abdourahmane Fadhoul
+4. Fadhul Abdouroihamane
 5. Moumouni Sawadogo
 
 
