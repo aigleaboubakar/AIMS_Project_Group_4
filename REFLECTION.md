@@ -7,7 +7,7 @@ During this project, each member of the group contributed to different parts of 
 - Amy Diop: Task 1, think and explain
 - Aboubakar Mahamat Ali: Task 2, repository initialization, think and explain, manage deployment
 - Marie Hortense Saizonou: Task 3, think and explain
-- Abdourahmane Fadhoul: Task 4, Extra (optional) code, think and explain
+- Fadhul Abdouroihamane: Task 4, Extra (optional) code, think and explain
 - Moumouni Sawadogo: Task 5, README and REFLECTION.md filling, think and explain
 
 We also worked together to review the code, test the functions, and prepare the final documentation.
