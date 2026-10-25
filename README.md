@@ -43,7 +43,21 @@ This function simulates the birthday experiment many times and returns the fract
 
 ## Example result
 
-The program displays values for `n = 10, 20, 23, 30, 40, 50` and compares the exact probability with the simulated one.
+EXAMPLE
+print(exact_probability(40))  
+print(exact_probability(0))  
+print(exact_probability(2))  
+print(has_repeat([10, 5, 7, 10]))  
+print(has_repeat([5,9,2]))  
+print(simulate(23, 100000))
+
+OUTPUT
+0.891231809817949
+0
+0.002739726027397249
+True
+False
+0.50776
 
 ## Expected result
 
@@ -59,10 +73,9 @@ For a 100-day year, the smallest number is:
 
 `exact_probability(366)` is 1 because when there are 366 people, it is impossible for all birthdays to be different. There are only 365 possible birthdays, so at least two people must share one.
 
-The probability that all birthdays are different becomes 0, so:
-
-P(two people share a birthday) = 1 - P(all different) = 1 - 0 = 1
-
+The exact_probability(366) is 1 because P(all diffrent) for n = 366 gives (365/365)*(364/365)*(363/365)*.....*(0/365) = 0,
+with(366 factors)
+P(two people share a birthday) = 1 - 0 = 1
 # Extra (optional)
 
 We need approximately 88 people so that the probability that three people share a birthday is around 0.5.
